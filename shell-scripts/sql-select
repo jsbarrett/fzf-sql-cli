@@ -1,0 +1,17 @@
+#!/bin/bash
+
+directory=$(dirname "$0")
+
+selected_table=$(node $directory/../showTables.js | fzf);
+
+if [[ "$selected_table" != "" ]];
+then
+  selected_columns=$(node $directory/../describeTable.js $selected_table | fzf -m);
+fi
+
+if [[ "$selected_table" != "" ]];
+then
+  node $directory/../selectFrom.js $selected_table $selected_columns | tee $directory/../results;
+fi
+
+echo 'sql-select' > $directory/../last_command;

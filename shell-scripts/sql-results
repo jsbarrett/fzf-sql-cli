@@ -1,0 +1,3 @@
+#!/bin/bash
+directory=$(dirname "$0");
+cat $directory/../results;

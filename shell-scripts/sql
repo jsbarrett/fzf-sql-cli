@@ -1,0 +1,5 @@
+#!/bin/bash
+
+directory=$(dirname "$0")
+last_command=$(cat $directory/../last_command);
+command "$last_command";

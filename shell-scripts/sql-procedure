@@ -1,0 +1,8 @@
+#!/bin/bash
+directory=$(dirname "$0")
+selected_procedure=$(node $directory/../selectStoredProcedures.js | fzf);
+if [[ "$selected_procedure" != "" ]];
+then
+  node $directory/../showCreateProcedure.js $selected_procedure | tee $directory/results;
+fi
+echo 'sql-procedure' > $directory/../last_command;
