@@ -1,8 +1,8 @@
 module.exports = {
   connection: {
-    host: process.env.SQL_CLI_HOST,
-    user: process.env.SQL_CLI_USER,
-    password: process.env.SQL_CLI_PASSWORD,
-    database: process.env.SQL_CLI_DATABASE
+    host: process.env.FZF_SQL_CLI_DB_HOST,
+    user: process.env.FZF_SQL_CLI_DB_USER,
+    password: process.env.FZF_SQL_CLI_DB_PASSWORD,
+    database: process.env.FZF_SQL_CLI_DB_DATABASE
   }
 }

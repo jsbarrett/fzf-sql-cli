@@ -58,6 +58,15 @@ Or you can just add them to the settings.js file directly.
 I use the .env file so I can add it to my .gitignore so my database credentials
 are not being stored in the repo history.
 
+Add something like the following in your .env file:
+```
+FZF_SQL_CLI_DB_HOST=127.0.0.1
+FZF_SQL_CLI_DB_USER=root
+FZF_SQL_CLI_DB_PASSWORD=root
+FZF_SQL_CLI_DB_DATABASE=my_awesome_database
+```
+Obviously replacing the values with whatever applies to your environment.
+
 ## Using
 - sql-select
 - sql-procedure
